@@ -1,21 +1,17 @@
 ﻿apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: argosai
+namespace: gtx-dev
 
 resources:
   - namespace.yaml
-  - gatex-ui/deployment.yaml
-  - gatex-ui/service.yaml
   - gatex-be/deployment.yaml
   - gatex-be/service.yaml
 
 commonLabels:
-  app: argo-gatex
+  app: gatex-be-service
   managed-by: argocd
 
 images:
-  - name: argo-gatex/gatex-ui
-    newTag: 1.0.0
-  - name: argo-gatex/gatex-be
-    newTag: 1.0.0
+  - name: ghcr.io/schemax-pte-ltd/gatex/gatex-be
+    newTag: 1.9.0-dev

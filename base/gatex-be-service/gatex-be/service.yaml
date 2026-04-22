@@ -1,14 +1,14 @@
 ﻿apiVersion: v1
 kind: Service
 metadata:
-  name: gatex-ui
-  namespace: argosai
+  name: gatex-be-service
+  namespace: gtx-dev
 spec:
   selector:
-    app: gatex-ui
+    app: gatex-be
   type: NodePort
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 3000
-    nodePort: 30080
+    targetPort: 8080
+    nodePort: 30081

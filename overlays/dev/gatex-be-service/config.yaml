@@ -1,0 +1,18 @@
+﻿apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gatex-be-service-config
+  namespace: gtx-dev
+data:
+  # Environment variables for gatex-be service
+  ENVIRONMENT: development
+  LOG_LEVEL: debug
+  API_PORT: "8080"
+  DATABASE_HOST: postgres-dev.gtx-dev.svc.cluster.local
+  DATABASE_PORT: "5432"
+  DATABASE_NAME: gatex_db
+  REDIS_HOST: redis-dev.gtx-dev.svc.cluster.local
+  REDIS_PORT: "6379"
+  SERVICE_NAME: gatex-be-service
+  ENABLE_METRICS: "true"
+  METRICS_PORT: "9090"

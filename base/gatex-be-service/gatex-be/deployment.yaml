@@ -1,27 +1,27 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gatex-ui
-  namespace: argosai
+  name: gatex-be-deployment
+  namespace: gtx-dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gatex-ui
+      app: gatex-be
   template:
     metadata:
       labels:
-        app: gatex-ui
+        app: gatex-be
     spec:
       containers:
-      - name: gatex-ui
-        image: argo-gatex/gatex-ui:1.0.0
+      - name: gatex-be
+        image: ghcr.io/schemax-pte-ltd/gatex/gatex-be:1.9.0-dev
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
         resources:
           requests:
             memory: "256Mi"
-            cpu: "100m"
+            cpu: "200m"
           limits:
             memory: "512Mi"
-            cpu: "500m"
+            cpu: "1000m"
