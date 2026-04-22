@@ -1,0 +1,28 @@
+﻿apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - ../../base
+
+replicas:
+  - name: application-a
+    count: 1
+
+images:
+  - name: application-a
+    newTag: dev-latest
+
+commonLabels:
+  environment: dev
+
+patches:
+  - target:
+      kind: Deployment
+      name: application-a
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/resources/requests/memory
+        value: "128Mi"
+      - op: replace
+        path: /spec/template/spec/containers/0/resources/limits/memory
+        value: "256Mi"

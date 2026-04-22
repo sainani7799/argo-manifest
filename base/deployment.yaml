@@ -1,0 +1,27 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application-a
+  namespace: application-a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: application-a
+  template:
+    metadata:
+      labels:
+        app: application-a
+    spec:
+      containers:
+      - name: application-a
+        image: application-a:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
