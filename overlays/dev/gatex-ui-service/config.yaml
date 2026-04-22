@@ -1,0 +1,15 @@
+﻿apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gatex-ui-service-config
+  namespace: gtx-dev
+data:
+  # Environment variables for gatex-ui service
+  ENVIRONMENT: development
+  LOG_LEVEL: debug
+  PORT: "3000"
+  REACT_APP_API_URL: http://gatex-be-service.gtx-dev.svc.cluster.local/api
+  REACT_APP_ENV: development
+  REACT_APP_DEBUG: "true"
+  ENABLE_METRICS: "true"
+  METRICS_PORT: "9091"
