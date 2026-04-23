@@ -20,6 +20,7 @@ patchesStrategicMerge:
     kind: Deployment
     metadata:
       name: argocd-gate-be-deployment
+      namespace: argocd-gatex-dev
     spec:
       template:
         spec:

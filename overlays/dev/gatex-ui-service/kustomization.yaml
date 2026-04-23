@@ -19,6 +19,7 @@ patchesStrategicMerge:
     kind: Deployment
     metadata:
       name: gatex-ui-deployment
+      namespace: argocd-gatex-dev
     spec:
       template:
         spec:
