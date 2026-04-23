@@ -1,4 +1,4 @@
 ﻿apiVersion: v1
 kind: Namespace
 metadata:
-  name: gtx-dev
+  name: argocd-gatex-dev

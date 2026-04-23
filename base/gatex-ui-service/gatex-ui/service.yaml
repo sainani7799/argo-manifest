@@ -2,13 +2,13 @@
 kind: Service
 metadata:
   name: gatex-ui-service
-  namespace: gtx-dev
+  namespace: argocd-gatex-dev
 spec:
   selector:
-    app: gatex-ui
+    app: argo-gatex-ui
   type: NodePort
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 3000
+    targetPort: 80
     nodePort: 30080

@@ -11,7 +11,7 @@ spec:
     path: overlays/dev/gatex-ui-service
   destination:
     server: https://kubernetes.default.svc
-    namespace: gtx-dev
+    namespace: argocd-gatex-dev
   syncPolicy:
     automated:
       prune: true

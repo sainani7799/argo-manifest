@@ -2,14 +2,14 @@
 kind: ConfigMap
 metadata:
   name: gatex-ui-service-config
-  namespace: gtx-dev
+  namespace: argocd-gatex-dev
 data:
   # Environment variables for gatex-ui service
-  ENVIRONMENT: development
-  LOG_LEVEL: debug
-  PORT: "3000"
-  REACT_APP_API_URL: http://gatex-be-service.gtx-dev.svc.cluster.local/api
-  REACT_APP_ENV: development
-  REACT_APP_DEBUG: "true"
-  ENABLE_METRICS: "true"
-  METRICS_PORT: "9091"
+  APP_GATEX_SERVICE_URL: "https://gatex-dev-be.xpparel.com/api"
+  APP_ID: "1"
+  APP_Name: "Gate Pass"
+  TIME_INTERVAL: "5000"
+  APP_IAM_SERVER_URL: "https://iam-dev-be.xpparel.com"
+  APP_IAM_CLIENT_ID: "e5b8e845-650e-49e5-a860-71eea76ca545"
+  APP_WMS_SERVICE_URL: "https://xpparel-dev-wms.xpparel.com"
+  APP_PKDMS_SERVICE_URL: "https://xpparel-dev-pkdms.xpparel.com"

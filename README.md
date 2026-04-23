@@ -1,12 +1,12 @@
 ﻿# ArgoCD Manifest Repository - Gatex Backend Service
 
-This repository contains Kubernetes manifests and Kustomization configurations for deploying **gatex-be-service** using ArgoCD in the **gtx-dev** namespace.
+This repository contains Kubernetes manifests and Kustomization configurations for deploying **gatex-be-service** using ArgoCD in the **argocd-gatex-dev** namespace.
 
 ## Directory Structure
 
 \\\
 base/gatex-be-service/
-├── namespace.yaml              # gtx-dev namespace
+├── namespace.yaml              # argocd-gatex-dev namespace
 ├── kustomization.yaml          # Base kustomization
 └── gatex-be/
     ├── deployment.yaml
@@ -21,7 +21,7 @@ overlays/dev/gatex-be-service/
 ## Configuration
 
 ### Base Configuration
-- **Namespace**: gtx-dev
+- **Namespace**: argocd-gatex-dev
 - **Image Registry**: ghcr.io/schemax-pte-ltd/gatex/gatex-be
 - **Default Image Tag**: 1.9.0-dev
 - **Service Type**: NodePort (Port 30081)
@@ -80,7 +80,7 @@ Or via ArgoCD UI:
 - Add new application
 - Set repo URL to your manifest repository
 - Set path to \overlays/dev/gatex-be-service\
-- Set destination namespace to \gtx-dev\
+- Set destination namespace to \argocd-gatex-dev\
 
 ## Quick Commands
 
@@ -96,15 +96,15 @@ kubectl apply -k overlays/dev/gatex-be-service
 
 ### Verify deployment
 \\\ash
-kubectl get deployment -n gtx-dev
-kubectl get configmap -n gtx-dev
-kubectl get secret -n gtx-dev
-kubectl get service -n gtx-dev
+kubectl get deployment -n argocd-gatex-dev
+kubectl get configmap -n argocd-gatex-dev
+kubectl get secret -n argocd-gatex-dev
+kubectl get service -n argocd-gatex-dev
 \\\
 
 ### View service endpoint
 \\\ash
-kubectl get service gatex-be-service -n gtx-dev
+kubectl get service gatex-be-service -n argocd-gatex-dev
 # Access at: http://<node-ip>:30081
 \\\
 

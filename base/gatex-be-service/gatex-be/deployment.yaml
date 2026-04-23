@@ -1,27 +1,27 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gatex-be-deployment
-  namespace: gtx-dev
+  name: argocd-gate-be-deployment
+  namespace: argocd-gatex-dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gatex-be
+      app: argocd-gate-be
   template:
     metadata:
       labels:
-        app: gatex-be
+        app: argocd-gate-be
     spec:
       containers:
-      - name: gatex-be
-        image: ghcr.io/schemax-pte-ltd/gatex/gatex-be:1.9.0-dev
+      - name: argo-gatex-be
+        image: ghcr.io/sainani7799/argo-gatex/gatex-be:1.5.0-dev
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         resources:
           requests:
-            memory: "256Mi"
+            memory: "128Mi"
             cpu: "200m"
           limits:
-            memory: "512Mi"
-            cpu: "1000m"
+            memory: "256Mi"
+            cpu: "400m"

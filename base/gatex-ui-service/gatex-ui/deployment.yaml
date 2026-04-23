@@ -2,26 +2,26 @@
 kind: Deployment
 metadata:
   name: gatex-ui-deployment
-  namespace: gtx-dev
+  namespace: argocd-gatex-dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gatex-ui
+      app: argo-gatex-ui
   template:
     metadata:
       labels:
-        app: gatex-ui
+        app: argo-gatex-ui
     spec:
       containers:
       - name: gatex-ui
-        image: ghcr.io/schemax-pte-ltd/gatex/gatex-ui:1.9.0-dev
+        image: ghcr.io/sainani7799/argo-gatex/gatex-ui:1.5.0-dev
         ports:
-        - containerPort: 3000
+        - containerPort: 80
         resources:
           requests:
             memory: "128Mi"
             cpu: "100m"
           limits:
             memory: "256Mi"
-            cpu: "500m"
+            cpu: "300m"

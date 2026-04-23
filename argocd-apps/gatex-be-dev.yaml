@@ -1,7 +1,7 @@
 ﻿apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gatex-be-dev
+  name: argo-gatex-be-dev
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
     path: overlays/dev/gatex-be-service
   destination:
     server: https://kubernetes.default.svc
-    namespace: gtx-dev
+    namespace: argocd-gatex-dev
   syncPolicy:
     automated:
       prune: true

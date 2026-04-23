@@ -1,14 +1,14 @@
 ﻿apiVersion: v1
 kind: Service
 metadata:
-  name: gatex-be-service
-  namespace: gtx-dev
+  name: argo-gatex-be-service
+  namespace: argocd-gatex-dev
 spec:
   selector:
-    app: gatex-be
+    app: argocd-gate-be
   type: NodePort
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8080
+    targetPort: 80
     nodePort: 30081
