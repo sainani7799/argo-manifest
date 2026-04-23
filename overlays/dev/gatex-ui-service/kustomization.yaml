@@ -27,8 +27,6 @@ patchesStrategicMerge:
               envFrom:
                 - configMapRef:
                     name: gatex-ui-service-config
-                - secretRef:
-                    name: gatex-ui-service-env
 
 commonLabels:
   app: argo-gatex-ui-service
