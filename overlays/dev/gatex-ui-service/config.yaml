@@ -5,7 +5,7 @@ metadata:
   namespace: argocd-gatex-dev
 data:
   # Environment variables for gatex-ui service
-  APP_GATEX_SERVICE_URL: "https://gatex-dev-be.xpparel.com/api"
+  APP_GATEX_SERVICE_URL: "http://192.168.99.20:30081/api"
   APP_ID: "1"
   APP_Name: "Gate Pass"
   TIME_INTERVAL: "5000"
