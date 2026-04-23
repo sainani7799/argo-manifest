@@ -8,3 +8,4 @@ data:
   APP_DB_PORT: '3306'
   APP_DB_USERNAME: sai
   APP_DB_DATABASE: xpparel-dev-gatex
+  DB_SSL: "false"
