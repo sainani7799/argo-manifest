@@ -4,7 +4,6 @@ metadata:
   name: argo-gatex-be-service-config
   namespace: argocd-gatex-dev
 data:
-  APP_SERVER_PORT: "80"
   APP_DB_HOST: 165.22.209.220
   APP_DB_PORT: '3306'
   APP_DB_USERNAME: sai
