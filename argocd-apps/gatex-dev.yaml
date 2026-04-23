@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR-ORG/argo-manifest
+    repoURL: https://github.com/sainani7799/argo-manifest
     targetRevision: HEAD
     path: overlays/dev
   destination:
