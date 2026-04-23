@@ -23,6 +23,8 @@ patchesStrategicMerge:
     spec:
       template:
         spec:
+          imagePullSecrets:
+            - name: argo-ghcr-secret
           containers:
             - name: gatex-ui
               envFrom:
