@@ -6,7 +6,6 @@ namespace: argocd-gatex-dev
 resources:
   - ../../../base/gatex-ui-service
   - config.yaml
-  - secrets.yaml
 
 # Image tag management for ArgoCD
 images:
