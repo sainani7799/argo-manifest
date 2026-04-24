@@ -8,11 +8,6 @@ resources:
   - config.yaml
   - secrets.yaml
 
-# Image tag management for ArgoCD
-images:
-  - name: ghcr.io/sainani7799/argo-gatex/gatex-be
-    newTag: 1.5.0-dev
-
 # Patches for environment configuration
 patchesStrategicMerge:
   - |-

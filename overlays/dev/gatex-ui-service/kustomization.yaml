@@ -7,11 +7,6 @@ resources:
   - ../../../base/gatex-ui-service
   - config.yaml
 
-# Image tag management for ArgoCD
-images:
-  - name: ghcr.io/sainani7799/argo-gatex/gatex-ui
-    newTag: 1.5.0-dev
-
 # Patches for environment configuration
 patchesStrategicMerge:
   - |-
