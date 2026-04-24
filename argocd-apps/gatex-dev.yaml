@@ -16,6 +16,7 @@ spec:
     automated:
       prune: true
       selfHeal: true
+      interval: 3m
     syncOptions:
       - CreateNamespace=true
       - PrunePropagationPolicy=foreground
