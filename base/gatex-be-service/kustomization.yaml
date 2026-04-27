@@ -14,4 +14,4 @@ commonLabels:
 
 images:
   - name: ghcr.io/sainani7799/argo-gatex/gatex-be
-    newTag: 1.9.0-dev
+    newTag: 1.10.0-dev
